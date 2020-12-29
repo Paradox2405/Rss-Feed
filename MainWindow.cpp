@@ -46,8 +46,7 @@ MainWindow::MainWindow(QWidget *parent) :
             this, &MainWindow::OnActionRemove);
     connect(_ui->actionQuit, &QAction::triggered,
             this, &MainWindow::OnActionQuit);
-    connect(_ui->actionAbout_software, &QAction::triggered,
-            this, &MainWindow::OnActionAbout);
+
 }
 
 MainWindow::~MainWindow()
@@ -159,13 +158,13 @@ void MainWindow::on_removeBtn_clicked()
 void MainWindow::slotError(QNetworkReply::NetworkError err)
 {
     Q_UNUSED(err)
-    QMessageBox::about(this, tr("Ошибка"), tr("Нет связи с сервером"));
+    QMessageBox::about(this, tr("Error"), tr("Please Check your internet connection!"));
 }
 
 void MainWindow::slotSslErrors(QList<QSslError> err)
 {
     Q_UNUSED(err)
-    QMessageBox::about(this, tr("Ошибка"), tr("Невозможно получить RSS,\nнет связи с сервером"));
+    QMessageBox::about(this, tr("Error"), tr("Unable to Receive RSS.\n Check Connection!"));
 }
 void MainWindow::OnActionAdd()
 {
@@ -180,16 +179,11 @@ void MainWindow::OnActionRemove()
 void MainWindow::OnActionQuit()
 {
     QMessageBox::StandardButton reply;
-    reply = QMessageBox::question(this, "Выход", "Вы уверены что хотите\nзакрыть программу RSS-клиент?",
+    reply = QMessageBox::question(this, "Output", "Are you sure you \n want to exit?",
                                   QMessageBox::Yes|QMessageBox::No);
     if (reply == QMessageBox::Yes) {
         QApplication::quit();
     }
 }
 
-void MainWindow::OnActionAbout()
-{
-    QMessageBox::about(this, tr("О Программе"), tr("Эта программа создана в рамках \n"
-                                                   "курсового проекта, и предоставляет полный функционал \n"
-                                                   "для чтения RSS лент новостей"));
-}
+

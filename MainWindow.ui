@@ -11,11 +11,14 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>RSS Клиент</string>
+   <string>RSS Feed</string>
   </property>
   <property name="windowIcon">
    <iconset resource="resourse.qrc">
     <normaloff>:/ico/rss.ico</normaloff>:/ico/rss.ico</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout_2">
@@ -26,7 +29,7 @@
       </property>
       <widget class="QGroupBox" name="groupBox">
        <property name="title">
-        <string>RSS источники</string>
+        <string>RSS Sources</string>
        </property>
        <layout class="QGridLayout" name="gridLayout">
         <item row="0" column="0" colspan="3">
@@ -48,14 +51,14 @@
         <item row="1" column="1">
          <widget class="QPushButton" name="addBtn">
           <property name="text">
-           <string>Добавить</string>
+           <string>Add</string>
           </property>
          </widget>
         </item>
         <item row="1" column="2">
          <widget class="QPushButton" name="removeBtn">
           <property name="text">
-           <string>Удалить</string>
+           <string>Delete</string>
           </property>
          </widget>
         </item>
@@ -69,7 +72,7 @@
         </sizepolicy>
        </property>
        <property name="title">
-        <string>Новости</string>
+        <string>News</string>
        </property>
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="0" column="1">
@@ -78,7 +81,7 @@
         <item row="1" column="1">
          <widget class="QLabel" name="chooseLabel">
           <property name="text">
-           <string>Пожалуйста, выберите или добавьте RSS источник</string>
+           <string>Please select or add an RSS source</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -97,26 +100,19 @@
      <x>0</x>
      <y>0</y>
      <width>819</width>
-     <height>19</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
-     <string>Файл</string>
+     <string>File</string>
     </property>
     <addaction name="actionAdd_feed"/>
     <addaction name="actionRemove_feed"/>
     <addaction name="separator"/>
     <addaction name="actionQuit"/>
    </widget>
-   <widget class="QMenu" name="menuAbout">
-    <property name="title">
-     <string>Помощь</string>
-    </property>
-    <addaction name="actionAbout_software"/>
-   </widget>
    <addaction name="menuFile"/>
-   <addaction name="menuAbout"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -129,27 +125,17 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionAdd_feed">
    <property name="text">
-    <string>Добавить источник</string>
+    <string>Add RSS Source</string>
    </property>
   </action>
   <action name="actionRemove_feed">
    <property name="text">
-    <string>Удалить источник</string>
+    <string>Delete RSS Source</string>
    </property>
   </action>
   <action name="actionQuit">
    <property name="text">
-    <string>Выход</string>
-   </property>
-  </action>
-  <action name="actionAbout_software">
-   <property name="text">
-    <string>О Программе</string>
-   </property>
-  </action>
-  <action name="actionAbout_developer">
-   <property name="text">
-    <string>About developer</string>
+    <string>Exit</string>
    </property>
   </action>
  </widget>
