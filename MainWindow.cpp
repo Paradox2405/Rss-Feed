@@ -164,7 +164,7 @@ void MainWindow::slotError(QNetworkReply::NetworkError err)
 void MainWindow::slotSslErrors(QList<QSslError> err)
 {
     Q_UNUSED(err)
-    QMessageBox::about(this, tr("Error"), tr("Unable to Receive RSS.\n Check Connection!"));
+    QMessageBox::about(this, tr("Error"), tr("Unable to Receive RSS.\n SSL Error!"));
 }
 void MainWindow::OnActionAdd()
 {
