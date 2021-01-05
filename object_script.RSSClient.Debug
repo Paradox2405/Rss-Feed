@@ -1,0 +1,10 @@
+debug/main.o
+debug/MainWindow.o
+debug/AddFeedDialog.o
+debug/JsonParser.o
+debug/FeedModel.o
+debug/RssModel.o
+debug/qrc_resourse.o
+debug/moc_MainWindow.o
+debug/moc_AddFeedDialog.o
+debug/moc_FeedModel.o

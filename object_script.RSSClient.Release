@@ -1,0 +1,10 @@
+release/main.o
+release/MainWindow.o
+release/AddFeedDialog.o
+release/JsonParser.o
+release/FeedModel.o
+release/RssModel.o
+release/qrc_resourse.o
+release/moc_MainWindow.o
+release/moc_AddFeedDialog.o
+release/moc_FeedModel.o
