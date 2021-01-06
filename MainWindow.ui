@@ -2,13 +2,24 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>819</width>
-    <height>458</height>
+    <width>1024</width>
+    <height>768</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Product Sans</family>
+    <pointsize>9</pointsize>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
   </property>
   <property name="windowTitle">
    <string>RSS Feed</string>
@@ -20,6 +31,9 @@
   <property name="autoFillBackground">
    <bool>false</bool>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(55, 71, 79);</string>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
@@ -28,12 +42,22 @@
        <enum>Qt::Horizontal</enum>
       </property>
       <widget class="QGroupBox" name="groupBox">
+       <property name="styleSheet">
+        <string notr="true">font: 75 9pt &quot;Product Sans&quot;;</string>
+       </property>
        <property name="title">
         <string>RSS Sources</string>
        </property>
        <layout class="QGridLayout" name="gridLayout">
         <item row="0" column="0" colspan="3">
-         <widget class="QTableView" name="feedTableView"/>
+         <widget class="QTableView" name="feedTableView">
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(16, 32, 39);</string>
+          </property>
+         </widget>
         </item>
         <item row="1" column="0">
          <spacer name="horizontalSpacer">
@@ -71,12 +95,22 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 9pt &quot;Product Sans&quot;;</string>
+       </property>
        <property name="title">
         <string>News</string>
        </property>
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="0" column="1">
-         <widget class="QTableView" name="rssTableView"/>
+         <widget class="QTableView" name="rssTableView">
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(16, 32, 39);</string>
+          </property>
+         </widget>
         </item>
         <item row="1" column="1">
          <widget class="QLabel" name="chooseLabel">
@@ -99,7 +133,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>819</width>
+     <width>1024</width>
      <height>25</height>
     </rect>
    </property>
