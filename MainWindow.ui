@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1024</width>
-    <height>768</height>
+    <width>1401</width>
+    <height>773</height>
    </rect>
   </property>
   <property name="font">
@@ -32,7 +32,8 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(55, 71, 79);</string>
+   <string notr="true">background-color: rgb(55, 71, 79);
+color: rgb(255, 255, 255);</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout_2">
@@ -42,23 +43,22 @@
        <enum>Qt::Horizontal</enum>
       </property>
       <widget class="QGroupBox" name="groupBox">
-       <property name="styleSheet">
-        <string notr="true">font: 75 9pt &quot;Product Sans&quot;;</string>
+       <property name="font">
+        <font>
+         <family>Product Sans</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
        </property>
        <property name="title">
         <string>RSS Sources</string>
        </property>
        <layout class="QGridLayout" name="gridLayout">
-        <item row="0" column="0" colspan="3">
-         <widget class="QTableView" name="feedTableView">
-          <property name="autoFillBackground">
-           <bool>true</bool>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(16, 32, 39);</string>
-          </property>
-         </widget>
-        </item>
         <item row="1" column="0">
          <spacer name="horizontalSpacer">
           <property name="orientation">
@@ -74,13 +74,58 @@
         </item>
         <item row="1" column="1">
          <widget class="QPushButton" name="addBtn">
+          <property name="font">
+           <font>
+            <family>Product Sans</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
           <property name="text">
            <string>Add</string>
           </property>
          </widget>
         </item>
+        <item row="0" column="0" colspan="3">
+         <widget class="QTableView" name="feedTableView">
+          <property name="font">
+           <font>
+            <family>Product Sans</family>
+            <pointsize>12</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+gridline-color: rgb(255, 255, 255);
+background-color: rgb(16, 32, 39);
+</string>
+          </property>
+          <property name="showGrid">
+           <bool>true</bool>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+         </widget>
+        </item>
         <item row="1" column="2">
          <widget class="QPushButton" name="removeBtn">
+          <property name="font">
+           <font>
+            <family>Product Sans</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <italic>false</italic>
+            <bold>true</bold>
+           </font>
+          </property>
           <property name="text">
            <string>Delete</string>
           </property>
@@ -95,30 +140,56 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
-       <property name="styleSheet">
-        <string notr="true">font: 75 9pt &quot;Product Sans&quot;;</string>
+       <property name="font">
+        <font>
+         <family>Product Sans</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
        </property>
        <property name="title">
         <string>News</string>
        </property>
        <layout class="QGridLayout" name="gridLayout_3">
-        <item row="0" column="1">
-         <widget class="QTableView" name="rssTableView">
-          <property name="autoFillBackground">
-           <bool>true</bool>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(16, 32, 39);</string>
-          </property>
-         </widget>
-        </item>
         <item row="1" column="1">
          <widget class="QLabel" name="chooseLabel">
+          <property name="font">
+           <font>
+            <family>Product Sans</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <italic>false</italic>
+            <bold>true</bold>
+           </font>
+          </property>
           <property name="text">
            <string>Please select or add an RSS source</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QTableView" name="rssTableView">
+          <property name="font">
+           <font>
+            <family>Product Sans</family>
+            <pointsize>12</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(16, 32, 39);
+</string>
           </property>
          </widget>
         </item>
@@ -133,33 +204,47 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1024</width>
-     <height>25</height>
+     <width>1401</width>
+     <height>30</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <widget class="QMenu" name="menuFile">
+    <property name="font">
+     <font>
+      <family>Product Sans</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="title">
      <string>File</string>
     </property>
     <addaction name="actionAdd_feed"/>
-    <addaction name="actionRemove_feed"/>
     <addaction name="separator"/>
     <addaction name="actionQuit"/>
    </widget>
    <addaction name="menuFile"/>
   </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-  </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionAdd_feed">
    <property name="text">
     <string>Add RSS Source</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Product Sans</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
   </action>
   <action name="actionRemove_feed">
