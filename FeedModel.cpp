@@ -8,7 +8,8 @@ FeedModel::FeedModel(QObject *parent) :
 FeedModel::~FeedModel()
 {
 }
-
+// items added to the feed view take place at this point on the feedtableview
+//next part creates its headers but headers have been hidden
 void FeedModel::AddItem(QPair<QString, QString> item)
 {
     QStandardItem *nameItem = new QStandardItem(item.first);

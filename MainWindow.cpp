@@ -10,6 +10,8 @@
 
 #include <QMessageBox>
 
+
+//loading of UI elements and doing settings is done here
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     _ui(new Ui::MainWindow)
@@ -53,7 +55,7 @@ MainWindow::~MainWindow()
 {
     //delete _ui;
 }
-
+//calling add feed dialog to enter data is done here
 void MainWindow::on_addBtn_clicked()
 {
     if (_addDialog->exec() == QDialog::Accepted)
@@ -65,6 +67,7 @@ void MainWindow::on_addBtn_clicked()
 
     JsonParser::save("model.txt", _model);
 }
+//actions when clicking on feedtableview
 
 void MainWindow::on_feedTableView_clicked(const QModelIndex &index)
 {
@@ -90,6 +93,8 @@ void MainWindow::on_feedTableView_clicked(const QModelIndex &index)
         _ui->chooseLabel->setVisible(false);
     }
 }
+
+//parsing to strings
 
 void MainWindow::slotReadyRead()
 {
@@ -138,6 +143,8 @@ void MainWindow::slotReadyRead()
     }
 }
 
+//deleting a feed item
+
 void MainWindow::on_rssTableView_clicked(const QModelIndex &index)
 {
     QDesktopServices::openUrl(QUrl(_rssModel->data(index, Qt::UserRole + 1).toString()));
@@ -155,10 +162,11 @@ void MainWindow::on_removeBtn_clicked()
     _ui->chooseLabel->setVisible(_model->rowCount() == 0);
 }
 
+//error codes
 void MainWindow::slotError(QNetworkReply::NetworkError err)
 {
     Q_UNUSED(err)
-    QMessageBox::about(this, tr("Error"), tr("Please Check your internet connection!"));
+    QMessageBox::about(this, tr("Error"), tr("Link error! Please Check Again!"));
 }
 
 void MainWindow::slotSslErrors(QList<QSslError> err)
@@ -166,6 +174,8 @@ void MainWindow::slotSslErrors(QList<QSslError> err)
     Q_UNUSED(err)
     QMessageBox::about(this, tr("Error"), tr("Unable to Receive RSS.\n SSL Error!"));
 }
+
+//button actions
 void MainWindow::OnActionAdd()
 {
     on_addBtn_clicked();
@@ -175,6 +185,8 @@ void MainWindow::OnActionRemove()
 {
     on_removeBtn_clicked();
 }
+
+//quitting
 
 void MainWindow::OnActionQuit()
 {

@@ -2,6 +2,8 @@
 
 #include <QDebug>
 
+//RSSFeedtable model is set here
+
 RssModel::RssModel(QObject *parent) :
     QStandardItemModel(parent)
 {

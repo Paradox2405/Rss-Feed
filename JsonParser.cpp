@@ -1,5 +1,8 @@
 #include "JsonParser.h"
 
+
+//this section contains code written to load data from the JSON file as it is saved
+//as a structured JASON file instead of a database
 bool JsonParser::load(QString fileName, QStandardItemModel *model) {
     QFile loadFile(fileName);
     if (!loadFile.open(QIODevice::ReadOnly)) {
@@ -35,6 +38,8 @@ bool JsonParser::load(QString fileName, QStandardItemModel *model) {
 
     return true;
 }
+
+//writing to the JSON takes place at this point
 
 bool JsonParser::save(QString fileName, QStandardItemModel *model) {
     QFile saveFile(fileName);
